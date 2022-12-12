@@ -1,0 +1,273 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html{
+    font-size: 62.5%;
+}
+
+body{
+    font-family: sans-serif;
+    
+}
+
+.app{
+    width: 100%;
+    height: auto;
+    display: flex;
+    position: relative;
+}
+/******************************/
+.side-bar{
+    background-color: rgba(0,0,0,0.9);
+    width: 15%;
+    height: 100vh;
+    position: fixed;
+    left: 0;
+    top: 0;
+    padding: 20px;
+
+}
+.side-bar div h1{
+    font-size: 40px;
+    color: #fff;
+    
+}
+
+.link{
+    color: #999;
+    text-decoration: none;
+   font-size: 16px;
+   display: flex;
+   gap: 10px;
+   margin-top: 20px;
+   align-items: center;
+   height: 50px;
+   font-weight: 700;
+
+
+}
+
+.link:hover{
+    color: #000;
+    background-color: rgba(225,225,225,0.8);
+}
+
+.side-bar nav ion-icon{
+    font-size: 25px;
+
+}
+
+
+
+/*************************/
+.container{
+    width: 100%;
+    min-height: 120vh;
+    background-image:linear-gradient(to bottom,#495057,#000);
+    margin-left: 225px;
+    
+   
+}
+
+.title{
+    font-size: 50px;
+    color: #fff;
+    margin: 40px;
+    letter-spacing: 2px;
+}
+
+.song-container{
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    padding:10px 40px;
+    
+}
+
+.song{
+   width: 30%;
+   height: 80px;
+   background-color: rgba(225,225,225,0.2);
+   border-radius:8px;
+   overflow: hidden;
+   display: flex;
+   gap: 18px;
+   align-items: center;
+   text-decoration: none;
+   transition: all 0.3s;
+}
+
+.song:hover{
+      background-color: rgba(225,225,225,0.6);
+}
+
+.song img{
+     width:20%;
+    height: 100%;
+    object-fit: cover;
+
+}
+
+.song p{
+    font-size: 18px;
+    color: #fff;
+    font-weight: 500;
+
+}
+
+.song-hidden{
+    opacity: 0;
+
+}
+
+.pages{
+    margin: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    padding:10px 40px;
+
+}
+
+.page{
+    width: 35px;
+    height: 28px;
+    background-color: #333;
+    color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 14px;
+    border-radius: 10px;
+    font-weight: 700;
+    transition: all 0.3s;
+}
+
+
+.page-current{
+    background-color: red;
+}
+
+
+
+
+.btn-hidden{
+    background: none;
+
+}
+.btn-hidden ion-icon{
+    color: #fff;
+    font-size: 30px;
+    
+}
+
+.btn-show{
+    width: 80px;
+    height: 80px;
+    position: fixed;
+    bottom: 20px;
+    right: 50px;
+    border-radius: 50px;
+    object-fit: cover;
+    background-repeat:round
+}
+
+@-webkit-keyframes rotating /* Safari and Chrome */ {
+  from {
+    -webkit-transform: rotate(0deg);
+    -o-transform: rotate(0deg);
+    transform: rotate(0deg);
+  }
+  to {
+    -webkit-transform: rotate(360deg);
+    -o-transform: rotate(360deg);
+    transform: rotate(360deg);
+  }
+}
+@keyframes rotating {
+  from {
+    -ms-transform: rotate(0deg);
+    -moz-transform: rotate(0deg);
+    -webkit-transform: rotate(0deg);
+    -o-transform: rotate(0deg);
+    transform: rotate(0deg);
+  }
+  to {
+    -ms-transform: rotate(-360deg);
+    -moz-transform: rotate(-360deg);
+    -webkit-transform: rotate(-360deg);
+    -o-transform: rotate(-360deg);
+    transform: rotate(-360deg);
+  }
+}
+.rotating {
+  -webkit-animation: rotating 5s linear infinite;
+  -moz-animation: rotating 5s linear infinite;
+  -ms-animation: rotating 5s linear infinite;
+  -o-animation: rotating 5s linear infinite;
+  animation: rotating 5s linear infinite;
+}
+.opacity{
+    transform: translateY(100%);
+    opacity: 0;
+}
+
+.bottom-play{
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    height: 100px;
+    width: 100%;
+   background-color: rgba(0,0,0,0.9);
+   display: flex;
+   align-items: center;
+   justify-content: space-between;
+   padding: 0 250px;
+   transition: all 0.3s;
+
+}
+
+.bottom-play img{
+    width:10%;
+    height: 80%;
+    object-fit: cover;
+    
+}
+
+.infor{
+    display: flex;
+    color: #fff;
+    gap: 10px;
+    align-items: center;
+    width: 30%;
+}
+
+.text{
+    line-height: 1.2;
+}
+
+.text p:first-child{
+    font-size: 18px;
+
+}
+
+.text p:last-child{
+    margin-top: 10px;
+    color: #999;
+
+}
+
+
+audio::-webkit-media-controls-panel {
+ background-color: #ddd; 
+}
+
+
+.active{
+    color: #fff;
+}

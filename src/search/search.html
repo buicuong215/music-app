@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../../home.css" />
+    <link rel="stylesheet" href="search.css">
+    <title>Music App</title>
+  </head>
+  <body>
+    <div class="app">
+      <div class="side-bar">
+        <div>
+          <h1>Music App</h1>
+        </div>
+        <nav>
+          <a href="../../index.html" class="link"><ion-icon name="home-outline"></ion-icon><span>Home</span></a>
+          <a href="#" class="link active"><ion-icon name="search-outline"></ion-icon><span>Search</span></a>
+        </nav>
+      </div>
+
+      <div class="container">
+        <div class="search">
+          <input type="text" />
+          <button class="btn-search">
+            <ion-icon name="search-outline"></ion-icon>
+          </button>
+        </div>
+        <div class="songs">
+          <h1 class="title">Songs</h1>
+          <div class="song-container"></div>
+          <div class="pages opacity">
+           
+          </div>
+        </div>
+      </div>
+      <div class="bottom-play opacity"></div>
+      <button class="btn-show opacity rotating"></button>
+    </div>
+    <script type="module" src="../controller/searchController.js"></script>
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+  </body>
+</html>
